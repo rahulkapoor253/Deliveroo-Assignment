@@ -110,7 +110,7 @@ void Utility :: printDetails(vector<int>  minute, vector<int>  hour, vector<int>
     }
     cout<<endl;
 
-    printColumnInfo("minute");
+    printColumnInfo("hours");
     for(int i=0;i<hour.size();i++)
     {
         if(hour[i] == 1)
@@ -130,7 +130,7 @@ void Utility :: printDetails(vector<int>  minute, vector<int>  hour, vector<int>
     }
     cout<<endl;
 
-    printColumnInfo("moth");
+    printColumnInfo("month");
     for(int i=0;i<month.size();i++)
     {
         if(month[i] == 1)

@@ -386,8 +386,25 @@ int main(int argc, char* argv[])
 {
     //at args[1] we receive the input argument
     string input = argv[1];
-    string command = argv[2];
     //cout<<input<<endl;
+
+    vector<string> values = Utility::splitUtils(input, ' ');
+    
+    if(values.size() != 6)
+    {
+        cout<<"Invalid cron expression"<<endl;
+        return 0;
+    }
+
+    string command = values[5];
+    input = "";
+
+    for(int i=0;i<values.size() - 1;i++)
+    {
+        input += values[i] + " ";
+    }
+
+    input.pop_back();
 
     CronParser cp(input, command);
 
